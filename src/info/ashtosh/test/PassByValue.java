@@ -44,6 +44,10 @@ public class PassByValue {
 		int i = 10;
 		changePrimitive(i);
 		System.out.println(i);
+		
+		Integer j = 10;
+		changePrimitive(j);
+		System.out.println(j);
 
 		String string = "Stirng literal";
 		changeStringliteral(string);
@@ -72,6 +76,10 @@ public class PassByValue {
 	}
 
 	private static void changePrimitive(int i) {
+		i = 100;
+	}
+	
+	private static void changePrimitive(Integer i) {
 		i = 100;
 	}
 
