@@ -41,42 +41,38 @@ public class PassByValue {
 		change(employee);
 		System.out.println(employee);
 
-		int i = 0;
-		add(i);
+		int i = 10;
+		changePrimitive(i);
 		System.out.println(i);
 
 		String string = "Stirng literal";
 		changeStringliteral(string);
 		System.out.println(string);
 
-		String s = new String("String new Keyword");
-		changeString(s);
+		String s = new String("new String");
+		changeStringObject(s);
 		System.out.println(s);
 
-		StringBuffer buffer = new StringBuffer("Ashutosh");
-		changeBuffer(buffer);
-		System.out.println(buffer);
+		StringBuffer stringBuffer = new StringBuffer("new StringBuffer");
+		changeStringBuffer(stringBuffer);
+		System.out.println(stringBuffer);
 	}
 
 	private static void changeStringliteral(String string) {
 		string = "TryChangingStirngliteral";
-
 	}
 
-	private static void changeBuffer(StringBuffer buffer) {
-
+	private static void changeStringBuffer(StringBuffer buffer) {
 		buffer.setLength(0);
-		buffer.append("ChangedByBuffer");
+		buffer.append("Try Changing StirngBuffer");
 	}
 
-	private static void changeString(String s) {
-
-		s = "Can't Change!";
+	private static void changeStringObject(String string) {
+		string = "Try Changing Stirng Object";
 	}
 
-	private static void add(int i) {
-
-		i = 10;
+	private static void changePrimitive(int i) {
+		i = 100;
 	}
 
 	private static void change(Employee s) {
