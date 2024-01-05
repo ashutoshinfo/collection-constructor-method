@@ -1,5 +1,7 @@
-package info.ashtosh.set.sortedSet.treeSet.constructor;
+package info.ashtosh.set.sortedSet.naviableSet.treeSet.constructor;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
@@ -10,10 +12,10 @@ public class TreeSet_Example {
 
 	public static void main(String[] args) {
 
-		TreeSet<StringBuilder> treeSet1 = new TreeSet<>();
-		treeSet1.add(new StringBuilder("X"));
-		treeSet1.add(new StringBuilder("B"));
-		treeSet1.add(new StringBuilder("Y"));
+		TreeSet<StringBuffer> treeSet1 = new TreeSet<>();
+		treeSet1.add(new StringBuffer("X"));
+// 		treeSet1.add(new StringBuilder("B"));
+//		treeSet1.add(new StringBuilder("Y"));
 		System.out.println(treeSet1);
 
 		TreeSet<Integer> treeSet2 = new TreeSet<Integer>(new Comparator<Integer>() {
@@ -24,6 +26,7 @@ public class TreeSet_Example {
 			}
 
 		});
+
 		treeSet2.addAll(List.of(1, 2, 5, 3, 4, 5));
 		System.out.println(treeSet2);
 
@@ -37,6 +40,14 @@ public class TreeSet_Example {
 
 		TreeSet<Integer> treeSet4 = new TreeSet<>(List.of(1, 2, 5, 3, 4, 5));
 		System.out.println(treeSet4);
+		TreeSet<Integer> treeSet6 = new TreeSet<Integer>((o1, o2) -> 0);
+		treeSet6.add(2);
+		treeSet6.add(22);
+		
+		System.out.println(treeSet6);
+		List<Integer> integers = new ArrayList<>(treeSet6);
+		Collections.sort(integers, (o1, o2) -> -o1.compareTo(o2));
+		TreeSet<String> integers2 = new TreeSet<>(hashSet);
 
 	}
 
